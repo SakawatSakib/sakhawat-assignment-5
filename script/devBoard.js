@@ -44,7 +44,7 @@ bgButton.addEventListener('click',function(){
     return assignElement;
 
  }
- //   assign task innertext value increasing  function
+ //   Complete task innertext value increasing  function
  function increaseCompleteTaskInnerText(id){
     const completeElement = document.getElementById(id)
     let completeTaskValue = parseInt(completeElement.innerText);
