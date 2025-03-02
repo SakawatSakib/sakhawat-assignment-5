@@ -45,27 +45,37 @@
             <div class="bg-[#FFFFFF] shadow-sm font-semibold text-xl  mb-4">
                 <h2 class="px-3 pt-4">Question-1: What are the different ways to select an element in the DOM?</h2>
                 <div class=" border-[#3752fd33] border-b-3 border-dashed mb-6 mt-6"></div>
-                <p class="pl-3 pb-2 font-medium text-gray-600">There are many ways to select an element in the dom</p>
+                <p class="pl-3 pb-2 font-medium text-gray-600">There are many ways to select an element in the dom , example like document.getElementById("id") = in this paranthesis you have to add id with quote this will search whole document body and find out you the specefic one element tag with that specefic id its kinda powerfull in web dev, document.getElementsByClassName("classname") = this will give you one or many elements because class can added to a multiple elements attribute so that if you want many boxes button with one js code then the all boxes button can have one similar class name with that we can find out all buttons in one js line of code. another is getElementsByTagName("p") with this we can identify elements with the tagname that we use everytime in html like p tag h1 tag etc, if we added 5 p tag in html body then if we use the code in js that will give us all 5 p tags together. another one is querySelector('.myclass')  must add the # or dot in paranthesis depend on the class or id it will just show you the first .myclass class . another one is queryselectorAll(.myclass) it will show all the .myclass class together. queryselectorAll querySelector both work as css selector.</p>
             </div>
             <div class="bg-[#FFFFFF] shadow-sm font-semibold text-xl  mb-4">
                 <h2 class="px-3 pt-4">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
                 <div class=" border-[#3752fd33] border-b-3 border-dashed mb-6 mt-6"></div>
-                <p class="pl-3 pb-2 font-medium text-gray-600">There are many ways to select an element in the dom</p>
+                <p class="pl-3 pb-2 font-medium text-gray-600">InnerHTML it will show the Whole HTML code with content,
+
+                    innerText : it will show only the visible text inside the element , if any text is display none it wont show that,
+
+                    textContent: it will show the text also the hidden or display none text also will be shown.
+
+                </p>
             </div>
             <div class="bg-[#FFFFFF] shadow-sm font-semibold text-xl  mb-4">
                 <h2 class="px-3 pt-4">Question-3: What is event delegation in the DOM?</h2>
                 <div class=" border-[#3752fd33] border-b-3 border-dashed mb-6 mt-6"></div>
-                <p class="pl-3 pb-2 font-medium text-gray-600">There are many ways to select an element in the dom</p>
+                <p class="pl-3 pb-2 font-medium text-gray-600"> event delegation mane holo parent element e jodi kono even listener add kora hoy tahole sei parent er child gulo ke o access kora jay karon event delegate kore kore step by step tar capture porjonto ba event target porjonto access hoy ekon target jodi Child hoy tahole event listener tar parent e thakle o problem nei it will work . jemon jodi kono ol list e loop chalai tarpor console loge jodi event listener diye event.target dei tahole jetale select korbo setakei dekhabe.</p>
             </div>
             <div class="bg-[#FFFFFF] shadow-sm font-semibold text-xl  mb-4">
                 <h2 class="px-3 pt-4">Question-4: What is event bubbling in the DOM?</h2>
                 <div class=" border-[#3752fd33] border-b-3 border-dashed mb-6 mt-6"></div>
-                <p class="pl-3 pb-2 font-medium text-gray-600">There are many ways to select an element in the dom</p>
+                <p class="pl-3 pb-2 font-medium text-gray-600">event bubble er mane holo jokhon kono child element e event hoy tokon seti tar parent element porjonto jete pare , tai etike sohoj vasay event bubble bole jemon pani er vitore batash charle seti bubble akare upore step by step jay temni . jemon event.target.parentNode.ParentNode = ekhane target jodi child element hoy tahole tar upor and tar uporer upore jodi kono parent element thake tahole setike access kora jabe.</p>
             </div>
             <div class="bg-[#FFFFFF] shadow-sm font-semibold text-xl  mb-4">
                 <h2 class="px-3 pt-4">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
                 <div class=" border-[#3752fd33] border-b-3 border-dashed mb-6 mt-6"></div>
-                <p class="pl-3 pb-2 font-medium text-gray-600">There are many ways to select an element in the dom</p>
+                <p class="pl-3 pb-2 font-medium text-gray-600">const p = document.createElement('p') diye new element create kora hoy,ekahne p tag p variable er moddhe create kora hoyeche, 
+                    kono element add korte chaile div.appendChild(p) kora hoy ekhane div er vitore create kora p tag ti add kora hocche,
+
+                    ar kisu remove korte hole .remove() use kora hoy jemon div.removeChild(p) = p tag ta ke remove kora hocche ekhane.
+                </p>
             </div>
         </section>
 
