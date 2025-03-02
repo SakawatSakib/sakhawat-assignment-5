@@ -33,37 +33,91 @@ bgButton.addEventListener('click',function(){
 
 // change the background color randomly after bg button clicked End Here
 
-// task boxes multi works Start 
-const boxes = document.getElementById('task-boxes');
-const msgContainer = document.getElementById('msg-container');
-function multiFunction(event){
-    alert('Board Updated Successfully');
-    if(alert){
-      const targetBtn = event.target;
-
-      
 
 
-      targetBtn.setAttribute('disabled','true');
-      msgContainer.innerHTML = ` <div class="bg-[#F4F7FF] p-4 text-start rounded-xl">You Have Completed the task at ${new Date()} </div>
+//   assign task innertext value decreasing function
+ function decreaseAssignTaskInnerText(id){
+    const assignElement = document.getElementById(id)
+    let assignTaskValue = parseInt(assignElement.innerText);
+    assignTaskValue -= 1;
+    assignElement.innerText = assignTaskValue;
+    return assignElement;
+
+ }
+ //   assign task innertext value increasing  function
+ function increaseCompleteTaskInnerText(id){
+    const completeElement = document.getElementById(id)
+    let completeTaskValue = parseInt(completeElement.innerText);
+    completeTaskValue += 1;
+    completeElement.innerText = completeTaskValue;
+    return completeElement;
+
+ }
+const activityContainer = document.getElementById('activity-container');
+ const taskButtons = document.getElementsByClassName('box-btn');
+ console.log(taskButtons);
+
+//  for loop in all task box buttons 
+ for(button of taskButtons){
+    button.addEventListener('click',function(event){
         
-        `
-        
-    //   if(true){
-        let assignTask = parseInt(document.getElementById('assign-task').innerText);
-        assignTask -= 1;
-        document.getElementById('assign-task').innerText = '0'+assignTask;
-        let completeTask = parseInt(document.getElementById('complete-task').innerText);
-        completeTask += 1;
-        document.getElementById('complete-task').innerText = completeTask;
-        
-        if(assignTask===00 && true){
-               alert('congrats!!!!You have completed all the current task')
+        const taskBox = event.target.closest('.shadow-lg');
+        console.log(taskBox);
+        const taskTitle = taskBox.querySelector(".title").textContent;
+        console.log(taskTitle)
+            
+
+        if(event.target.getAttribute('disabled') === null){
+            event.target.setAttribute('disabled',true);
+            if(event.target.hasAttribute('disabled',true)){
+                alert('Board Updated Successfully');
+                decreaseAssignTaskInnerText('assign-task');
+                increaseCompleteTaskInnerText("complete-task");
+                let assignTaskValue = document.getElementById('assign-task').innerText ;
+                if(parseInt(assignTaskValue)===0){
+                    alert('congrats!!!!You have completed all the current task');
+                }
+            }
         }
+        logActivity(taskTitle);
+        //  append the dynamic target button title and time in activityContainer start here 
+        function logActivity(taskTitle){
+            const d = new Date().toLocaleTimeString();
+            const p = document.createElement('p');
+            p.className = "bg-[#F4F7FF] my-2 p-2 rounded-md";
+            p.textContent = `You Have completed the task ${taskTitle} at ${d}` 
+            activityContainer.appendChild(p)
 
-    //   }
-    }
+        }
+        //  append the dynamic target button title and time in activityContainer End here 
+    })
+ }
+// task boxes multi works End Here
 
-}
-// task boxes multi works End
+//  activity Button delete task container contents msgs Start here 
+
+ document.getElementById('clear-btn').addEventListener('click',function(){
+    const activityContainer = document.getElementById('activity-container');
+    activityContainer.textContent ="";
+    location.reload();
+ })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
