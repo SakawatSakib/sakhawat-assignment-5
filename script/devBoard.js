@@ -33,4 +33,37 @@ bgButton.addEventListener('click',function(){
 
 // change the background color randomly after bg button clicked End Here
 
+// task boxes multi works Start 
+const boxes = document.getElementById('task-boxes');
+const msgContainer = document.getElementById('msg-container');
+function multiFunction(event){
+    alert('Board Updated Successfully');
+    if(alert){
+      const targetBtn = event.target;
+
+      
+
+
+      targetBtn.setAttribute('disabled','true');
+      msgContainer.innerHTML = ` <div class="bg-[#F4F7FF] p-4 text-start rounded-xl">You Have Completed the task at ${new Date()} </div>
+        
+        `
+        
+    //   if(true){
+        let assignTask = parseInt(document.getElementById('assign-task').innerText);
+        assignTask -= 1;
+        document.getElementById('assign-task').innerText = '0'+assignTask;
+        let completeTask = parseInt(document.getElementById('complete-task').innerText);
+        completeTask += 1;
+        document.getElementById('complete-task').innerText = completeTask;
+        
+        if(assignTask===00 && true){
+               alert('congrats!!!!You have completed all the current task')
+        }
+
+    //   }
+    }
+
+}
+// task boxes multi works End
 

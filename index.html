@@ -34,7 +34,7 @@
                 <div class="flex items-center w-fit">
                     <div class="flex bg-[#F4F7FF] rounded-full p-3 items-center">
                         <img class="w-[32px] h-[32px]" src="assets/checkbox.png" alt="">
-                        <h1 class="text-3xl text-[#00303C] font-bold pl-4">23</h1>
+                        <h1 id="complete-task" class="text-3xl text-[#00303C] font-bold pl-4">23</h1>
                     </div>
                     <div id="bg-btn" class="bg-[#F4F7FF] ml-18 rounded-full p-3 ">
                         <img class="cursor-pointer " src="assets/theme-btn.png " alt="">
@@ -63,7 +63,7 @@
                             </div>
                             <div class="pl-2">
                                 <p class="text-sm text-[#00303C] font-semibold">Task Assigned</p>
-                                <h2 class="font-bold text-[#00303C] text-3xl">06</h2>
+                                <h2 id="assign-task" class="font-bold text-[#00303C] text-3xl">06</h2>
                             </div>
                         </div>
                         <div id="discover-box"
@@ -87,9 +87,9 @@
 
                     <div class=" border-[#3752fd33] border-b-3 border-dashed mb-14 mt-10"></div>
 
-                    <div class="grid grid-cols-3 grid-rows-2 gap-8 mx-6" id="task-boxs">
+                    <div class="grid grid-cols-3 grid-rows-2 gap-8 mx-6" id="task-boxes">
                         <!--Task box 1  -->
-                        <div class="bg-[#F4F7FF] rounded-xl shadow-lg ">
+                        <div id="box-1" class="bg-[#F4F7FF] rounded-xl shadow-lg ">
                             <div class="p-6">
                                 <div class="bg-[#FFF] rounded-md flex justify-center  w-[120px] h-[40px] text-center items-center ">
                                     <h3 class="text-[16px] text-[#00303C] font-medium">ShopEase</h3>
@@ -112,7 +112,7 @@
                                     </div>
 
                                     <div>
-                                        <button class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
+                                        <button onclick="multiFunction(event)" id="box1-btn" class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
                                     </div>
 
                                 </div>
@@ -120,7 +120,7 @@
                             </div>
                         </div>
                         <!--Task box 2  -->
-                        <div class="bg-[#F4F7FF] rounded-xl shadow-lg">
+                        <div id="box-2" class="bg-[#F4F7FF] rounded-xl shadow-lg">
                             <div class="p-6">
                                 <div class="bg-[#FFF] rounded-md flex justify-center  w-[120px] h-[40px] text-center items-center p-4">
                                     <h3 class="text-[16px] text-[#00303C] font-medium">CloudSync</h3>
@@ -142,7 +142,7 @@
                                     </div>
 
                                     <div>
-                                        <button class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
+                                        <button onclick="multiFunction(event)" id="box2-btn"class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
                                     </div>
 
                                 </div>
@@ -150,7 +150,7 @@
                             </div>
                         </div>
                         <!--Task box 3  -->
-                        <div class="bg-[#F4F7FF] rounded-xl shadow-lg">
+                        <div id="box-3" class="bg-[#F4F7FF] rounded-xl shadow-lg">
                             <div class="p-6">
                                 <div class="bg-[#FFF] rounded-md flex justify-center  w-[120px] h-[40px] text-center items-center p-4">
                                     <h3 class="text-[16px] text-[#00303C] font-medium">SwiftPay</h3>
@@ -172,7 +172,7 @@
                                     </div>
 
                                     <div>
-                                        <button class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
+                                        <button onclick="multiFunction(event)" id="box3-btn" class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
                                     </div>
 
                                 </div>
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                         <!--Task box 4  -->
-                        <div class="bg-[#F4F7FF] rounded-xl shadow-lg">
+                        <div id="box-4" class="bg-[#F4F7FF] rounded-xl shadow-lg">
                             <div class="p-6">
                                 <div class="bg-[#FFF] rounded-md flex justify-center  w-[100px] h-[40px] text-center items-center p-4">
                                     <h3 class="text-[16px] text-[#00303C] font-medium">Meta</h3>
@@ -202,7 +202,7 @@
                                     </div>
 
                                     <div>
-                                        <button class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
+                                        <button onclick="multiFunction(event)" id="box4-btn"class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
                                     </div>
 
                                 </div>
@@ -210,7 +210,7 @@
                             </div>
                         </div>
                         <!--Task box 5  -->
-                        <div class="bg-[#F4F7FF] rounded-xl shadow-lg">
+                        <div id="box-5" class="bg-[#F4F7FF] rounded-xl shadow-lg">
                             <div class="p-6">
                                 <div class="bg-[#FFF] rounded-md flex justify-center  w-[130px] h-[40px] text-center items-center p-4">
                                     <h3 class="text-[16px] text-[#00303C] font-medium">Google LLC</h3>
@@ -232,7 +232,7 @@
                                     </div>
 
                                     <div>
-                                        <button class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
+                                        <button onclick="multiFunction(event)" id="box5-btn"class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
                                     </div>
 
                                 </div>
@@ -240,7 +240,7 @@
                             </div>
                         </div>
                         <!--Task box 6  -->
-                        <div class="bg-[#F4F7FF] rounded-xl shadow-lg">
+                        <div id="box-6" class="bg-[#F4F7FF] rounded-xl shadow-lg">
                             <div class="p-6">
                                 <div class="bg-[#FFF] rounded-md flex justify-center  w-[120px] h-[40px] text-center items-center p-4">
                                     <h3 class="text-[16px] text-[#00303C] font-medium">Glassdoar</h3>
@@ -262,7 +262,7 @@
                                     </div>
 
                                     <div>
-                                        <button class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg">Completed</button>
+                                        <button onclick="multiFunction(event)" id="box6-btn"class="btn bg-[#3752FD] text-[#FFF] text-[16px] rounded-lg" >Completed</button>
                                     </div>
 
                                 </div>
@@ -291,8 +291,10 @@
                         <div class=" border-[#3752FD33] border-b-3 border-dashed">
 
                         </div>
-                        <div>
-                            HIi
+                        <div id="msg-container" class="text-start p-6 flex flex-row">
+
+                            
+                            
                         </div>
 
 
